@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.luyuan.cleen.MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_tit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="About Canada"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/ll_dialog"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:gravity="center"
+            android:id="@+id/pb_progressbar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="数据加载中..." />
+    </LinearLayout>
+
+    <com.luyuan.cleen.view.PullToRefreshListView
+        android:id="@+id/prf_rows"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_tit"
+        android:layout_margin="10dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:visibility="invisible" />
+</RelativeLayout>
